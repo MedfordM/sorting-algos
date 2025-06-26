@@ -4,9 +4,12 @@ def sort(input):
         did_swap = False
         for j in range(0, length - i - 1):
             if input[j] > input[j + 1]:
-                input[j], input[j + 1] = input[j + 1], input[j]
+                temp = input[j]
+                input[j] = input[j + 1]
+                input[j + 1] = temp
                 did_swap = True
 
             if not did_swap:
                 break
-
+    
+    return input
